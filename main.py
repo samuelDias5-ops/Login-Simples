@@ -1,3 +1,5 @@
+from dados.cadastro import cadastar 
+
 def menu_inicial():
     while True:
         print("Sistema de Login")
@@ -12,15 +14,17 @@ def menu_inicial():
 
             match op:
                 case 1:
-                    user = cadastrar()
-
+                    print(cadastar())
+                    user = cadastar()
                 case 2:
                     ler_usuarios(user)
                 case 3:
-                    
+                    print("oi") 
                 case 4:
                     print("Saindo... Volte sempre!")
                     break
+                case _:
+                    print("Opção não existe!")
 
         except(TypeError, ValueError):
             print("Opção inválida. Tente novamente!")
