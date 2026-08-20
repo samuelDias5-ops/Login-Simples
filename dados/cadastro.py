@@ -1,5 +1,6 @@
 def cadastrar():
     n = input("Insira seu nome: ")
+    id = 1
     while True:
         try:  
             i = int(input("Insira sua idade: "))
@@ -10,9 +11,12 @@ def cadastrar():
             print("Novo Cadastro: ", end="")
 
         dados = {
+            "id": id,
             "nome": n,
             "idade": i
         }
+        id+=1
         print(f"{n} cadastrado com sucesso!")
+        
         return dados
                     

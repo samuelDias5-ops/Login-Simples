@@ -1,4 +1,6 @@
-from dados.cadastro import cadastrar, ler_usuarios
+from dados.cadastro import cadastrar
+from dados.dados import ler_usuarios, salvar_dados 
+#from dados.salvar import salvar_dados 
 
 def menu_inicial():
     while True:
@@ -15,9 +17,9 @@ def menu_inicial():
             match op:
                 case 1:
                     user = cadastrar()
+                    salvar_dados(user)
                 case 2:
-                    print("oi") 
-                    ler_usuarios(user)
+                    ler_usuarios()  
                 case 3:
                     print("oi") 
                 case 4:
@@ -25,9 +27,9 @@ def menu_inicial():
                     break
                 case _:
                     print("Opção não existe!")
+        except(ValueError,TypeError, KeyboardInterrupt):
+            continue
 
-        except(TypeError, ValueError):
-            print("Opção inválida. Tente novamente!")
 
 
 menu_inicial()
