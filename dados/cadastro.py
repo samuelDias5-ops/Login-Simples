@@ -1,20 +1,18 @@
 def cadastrar():
     n = input("Insira seu nome: ")
     while True:
-        try:
+        try:  
             i = int(input("Insira sua idade: "))
-            if i < 18:
-                print("Voçê menor de idade!")
-                break
-        except(TypeError, ValueError):
+        except:
             print("Erro. Insira uma idade válida!")
             continue
         else:
-            dados = {
-                "nome": n,
-                "idade": i
-            }
+            print("Novo Cadastro: ", end="")
 
-    return dados
-
-        
+        dados = {
+            "nome": n,
+            "idade": i
+        }
+        print(f"{n} cadastrado com sucesso!")
+        return dados
+                    
