@@ -1,6 +1,6 @@
 from dados.cadastro import cadastrar
 from dados.dados import ler_usuarios, salvar_dados 
-#from dados.salvar import salvar_dados 
+
 
 def menu_inicial():
     while True:

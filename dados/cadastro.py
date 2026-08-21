@@ -15,8 +15,9 @@ def cadastrar():
             "nome": n,
             "idade": i
         }
-        id+=1
-        print(f"{n} cadastrado com sucesso!")
+        for i in dados:
+            i["id"]+=1
+        print(f"{n} cadastrado(a) com sucesso!")
         
         return dados
                     
