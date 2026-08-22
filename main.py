@@ -29,6 +29,8 @@ def menu_inicial():
                 case 3:
                     print("oi") 
                 case 4:
+                    print("oi")
+                case 5:
                     print("Saindo... Volte sempre!")
                     break
                 case _:
